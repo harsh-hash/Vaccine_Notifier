@@ -1,12 +1,11 @@
 package com.example.vaccinenotifier
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import com.example.vaccinenotifier.databinding.PincodeFragmentBinding
 
 class PincodeFragment : Fragment() {
@@ -17,7 +16,16 @@ class PincodeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<PincodeFragmentBinding>(inflater,R.layout.pincode_fragment,container,false)
+        val binding = DataBindingUtil.inflate<PincodeFragmentBinding>(
+            inflater,
+            R.layout.pincode_fragment,
+            container,
+            false
+        )
+
+        binding.showCenters.setOnClickListener(View.OnClickListener {
+
+        })
         return binding.root
     }
 
